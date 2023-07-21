@@ -27,6 +27,7 @@ product-recommendations:not(.is-accordion) .complementary-products__container {
 .complementary-slide > ul {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   gap: var(--grid-mobile-vertical-spacing);
 }
 
