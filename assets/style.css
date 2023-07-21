@@ -2169,7 +2169,7 @@ img.img-fluid {
     bottom: 55%;
   }
   .section .banner--large:not(.banner--adapt) {
-    min-height: 80rem!important;
+    min-height: 100rem!important;
   }
   .hwd-mad-bottom-btn .button--primary {
     min-width: 140px;
@@ -2188,6 +2188,6 @@ img.img-fluid {
     font-size: 10px;
   } 
   .section .banner--large:not(.banner--adapt) {
-    min-height: 80rem!important;
+    min-height: 100rem!important;
   }
 }
