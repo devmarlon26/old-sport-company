@@ -137,6 +137,11 @@
     margin: 0;
     font-size: 14px;
   }
+
+  svg.checked {
+    align-self: flex-start;
+    margin-top: 3px;
+  }
 }
 @media screen and (max-width: 749px) {
   .banner:not(.banner--stacked) {
