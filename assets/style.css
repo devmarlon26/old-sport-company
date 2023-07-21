@@ -2138,7 +2138,7 @@ img.img-fluid {
 }
 
 @media screen and (max-width: 425px) {
-  .section .banner--large:not(.banner--adapt) {
+  .banner--large:not(.banner--adapt) {
     min-height: 100rem!important;
   }
   .banner__heading {
