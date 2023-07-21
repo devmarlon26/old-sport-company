@@ -1447,7 +1447,7 @@ a.product__text {
 }
 
 .icon-with-text--horizontal .icon-with-text__item {
-  flex-direction: column;
+  flex-direction: row;
   width: 33%;
 }
 
