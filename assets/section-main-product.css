@@ -11,12 +11,13 @@ legend.form__label.layout {
   align-items: center;
 }
 .section-size {
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   display: none;
   z-index: 111;
+  background-color: #fff;
 }
 
 .size_guide {
