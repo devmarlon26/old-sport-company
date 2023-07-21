@@ -56,13 +56,20 @@
           "settings": {
             "banner_list": "<p>Lorem ipsum amet, consectetur<\/p>"
           }
+        },
+        "1077eff6-83dd-4ddf-9d3b-0defc8270b28": {
+          "type": "List",
+          "settings": {
+            "banner_list": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing<\/p>"
+          }
         }
       },
       "block_order": [
         "2cc301c7-cfec-49cd-92f2-a3fae2cc37e3",
         "6fdc318c-98ee-4029-afed-7fe4df1e028c",
         "6c77bd6f-318a-439e-88fd-e63416d24684",
-        "c01add01-4f31-435c-af4d-90dc699b90c3"
+        "c01add01-4f31-435c-af4d-90dc699b90c3",
+        "1077eff6-83dd-4ddf-9d3b-0defc8270b28"
       ],
       "settings": {
         "image_overlay_opacity": 40,
