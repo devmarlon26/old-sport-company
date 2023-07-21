@@ -114,7 +114,9 @@
                   <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }} style="color: {{ block.settings.p-text-color }}">
                     <p>{{ block.settings.text }}</p>
                     <ul class="banner__list">
-                      <li class="banner__list-item"> {% render 'checked' %} hell</li>
+                    {% if block.type == "List" %}
+                      <li class="banner__list-item"> {% render 'checked' %} {{ block.settings.banner_list }}</li>
+                    {% endif %}
                     </ul>
                   </div>
                   <div
