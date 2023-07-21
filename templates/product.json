@@ -57,6 +57,19 @@
             "heading_3": "Heading"
           }
         },
+        "bf7cbfc5-7670-42ff-9617-d3084fbc2f4f": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Pairs well with",
+            "make_collapsible_row": false,
+            "icon": "price_tag",
+            "product_list_limit": 3,
+            "products_per_page": 3,
+            "pagination_style": "numbers",
+            "image_ratio": "square",
+            "enable_quick_add": true
+          }
+        },
         "43fbe521-ae68-46ec-b6e4-24cce7966a4a": {
           "type": "collapsible_tab",
           "settings": {
@@ -83,19 +96,6 @@
             "content": "<p>Integer vitae metus aliquet, finibus tellus vel, dictum turpis. Morbi porttitor magna nec consectetur tincidunt. Fusce ullamcorper turpis orci, at ultrices lacus suscipit in. Sed dignissim, sem eu facilisis rhoncus, metus nulla porttitor risus, quis sollicitudin est ante et magna. Aenean efficitur scelerisque venenatis.<\/p>",
             "page": ""
           }
-        },
-        "bf7cbfc5-7670-42ff-9617-d3084fbc2f4f": {
-          "type": "complementary",
-          "settings": {
-            "block_heading": "Pairs well with",
-            "make_collapsible_row": false,
-            "icon": "price_tag",
-            "product_list_limit": 3,
-            "products_per_page": 3,
-            "pagination_style": "numbers",
-            "image_ratio": "square",
-            "enable_quick_add": true
-          }
         }
       },
       "block_order": [
@@ -107,10 +107,10 @@
         "variant_picker",
         "buy_buttons",
         "df218452-a9f0-426e-8946-e9d6839f3926",
+        "bf7cbfc5-7670-42ff-9617-d3084fbc2f4f",
         "43fbe521-ae68-46ec-b6e4-24cce7966a4a",
         "5573cab7-3fcb-4a68-9e01-50e66974509a",
-        "932b4a03-f9cb-42a3-839c-b14a80ba4cd8",
-        "bf7cbfc5-7670-42ff-9617-d3084fbc2f4f"
+        "932b4a03-f9cb-42a3-839c-b14a80ba4cd8"
       ],
       "settings": {
         "enable_sticky_info": true,
