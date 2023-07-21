@@ -31,7 +31,7 @@ legend.form__label.layout {
   font-family: Museo Sans;
   font-size: 11px;
   font-style: normal;
-  text-align: center;
+  text-align: center !important;
   font-weight: 400;
   line-height: 23px; /* 209.091% */
   text-decoration-line: underline;
