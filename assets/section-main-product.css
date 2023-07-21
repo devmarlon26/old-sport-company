@@ -11,6 +11,10 @@
   margin: 0 auto;
 }
 
+ul.banner__list {
+  list-style-type: none;
+}
+
 .product__media-wrapper {
   padding-left: 0;
 }
