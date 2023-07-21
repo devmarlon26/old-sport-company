@@ -2093,6 +2093,9 @@ img.img-fluid {
   .slider-icon-area .svg-label {
     font-size: 10px;
   }
+  .banner--large:not(.banner--adapt) {
+    min-height: 55rem!important;
+}
   .banner--content-align-left.banner--desktop-transparent .banner__box {
     max-width: 30rem !important;
   }
