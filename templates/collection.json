@@ -1,0 +1,41 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_subtitle": true,
+        "collection-subtitle": "<p>Rated <strong>5.0<\/strong> Based on <strong>1,000+<\/strong> Happy Customers<\/p>",
+        "show_collection_title": true,
+        "collection-title": "Premium Needlepoint Penny Loafers",
+        "show_collection_description": true,
+        "show_collection_image": true,
+        "collection-image": "shopify:\/\/shop_images\/BG_1.png",
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 3,
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_shop_btn": true,
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid"
+  ],
+  "wrapper": "div.featured-collection.collections-templates"
+}

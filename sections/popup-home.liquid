@@ -1,0 +1,196 @@
+{% if template.name contains 'index' %}
+
+{{ 'section-newsletter-popup.css' | asset_url | stylesheet_tag }}
+
+<section class="section-{{ section.id }} section-newsletter">
+  <div class="news-max-size">
+    
+    <div class="news-popup-close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+        <g clip-path="url(#clip0_1_4263)">
+          <path d="M22.5 45C10.0933 45 0 34.9067 0 22.5C0 10.0933 10.0933 0 22.5 0C34.9067 0 45 10.0933 45 22.5C45 34.9067 34.9067 45 22.5 45ZM22.5 3.21419C11.8659 3.21419 3.21419 11.8659 3.21419 22.5C3.21419 33.1341 11.8659 41.7858 22.5 41.7858C33.1341 41.7858 41.7858 33.1341 41.7858 22.5C41.7858 11.8659 33.1341 3.21419 22.5 3.21419Z" fill="#203D5F"/>
+          <path d="M30.5358 32.143C30.1245 32.143 29.7132 31.9861 29.3994 31.672L13.3281 15.6007C12.7002 14.9728 12.7002 13.9558 13.3281 13.3282C13.9557 12.7007 14.973 12.7003 15.6006 13.3282L31.6719 29.3995C32.2998 30.0275 32.2998 31.0444 31.6719 31.672C31.3581 31.9861 30.9471 32.143 30.5358 32.143Z" fill="#203D5F"/>
+          <path d="M14.4642 32.1429C14.0529 32.1429 13.6419 31.986 13.3281 31.6719C12.7002 31.0443 12.7002 30.027 13.3281 29.3994L29.3994 13.3281C30.0273 12.7002 31.0443 12.7002 31.6719 13.3281C32.2995 13.9557 32.2998 14.973 31.6719 15.6006L15.6006 31.6719C15.2868 31.986 14.8755 32.1429 14.4642 32.1429Z" fill="#203D5F"/>
+        </g>
+        <defs>
+          <clipPath id="clip0_1_4263">
+            <rect width="45" height="45" fill="white"/>
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+              
+    <div class="news-flex">
+      <div class="news-popup-40">
+        {% if section.settings.popup-img %}
+          <div class="news-image small-hide">
+            <img src="{{ section.settings.popup-img | img_url: 'master' }}" alt="" class="img-fluid">
+          </div>
+        {% endif %}
+        {% if section.settings.popup-img-mobile %}
+          <div class="news-image small-show">
+            <img src="{{ section.settings.popup-img-mobile | img_url: 'master' }}" alt="" class="img-fluid">
+          </div>
+        {% endif %}
+      </div>
+      <div class="news-popup-60">
+        
+        <div class="news-content">
+          {% if section.settings.title %}
+            <h2 class="news-title">{{ section.settings.title }}</h2>
+          {% endif %}
+          {% if section.settings.sub-title %}
+            <h2 class="news-sub-title">{{ section.settings.sub-title }}</h2>
+          {% endif %}
+          <div class="news-form-grp">
+            {% form 'customer', class: 'newsletter-form' %}
+              <input type="hidden" name="contact[tags]" value="newsletter">
+              <div
+                class="newsletter-form__field-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                {% if settings.animations_reveal_on_scroll %}
+                  data-cascade
+                  style="--animation-order: {{ forloop.index }};"
+                {% endif %}
+              >
+                <div class="fields">
+                  <input
+                    id="NewsletterForm--{{ section.id }}"
+                    type="email"
+                    name="contact[email]"
+                    class="field__inputs"
+                    value="{{ form.email }}"
+                    aria-required="true"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    autocomplete="email"
+                    {% if form.errors %}
+                      autofocus
+                      aria-invalid="true"
+                      aria-describedby="Newsletter-error--{{ section.id }}"
+                    {% elsif form.posted_successfully? %}
+                      aria-describedby="Newsletter-success--{{ section.id }}"
+                    {% endif %}
+                    placeholder="Type your email here"
+                    required
+                  >
+                  <button
+                    type="submit"
+                    class="newsletter-form__button field__button"
+                    name="commit"
+                    id="Subscribe"
+                    aria-label="{{ 'newsletter.button_label' | t }}"
+                  >
+                    {{ section.settings.btn-title }} <span class="pol-8"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+  <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="white"/>
+</svg></span>
+                  </button>
+                </div>
+                {%- if form.errors -%}
+                  <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">
+                    {%- render 'icon-error' -%}
+                    {{- form.errors.translated_fields.email | capitalize }}
+                    {{ form.errors.messages.email -}}
+                  </small>
+                {%- endif -%}
+              </div>
+              {%- if form.posted_successfully? -%}
+                <h3
+                  class="newsletter-form__message newsletter-form__message--success form__message"
+                  id="Newsletter-success--{{ section.id }}"
+                  tabindex="-1"
+                  autofocus
+                >
+                  {% render 'icon-success' -%}
+                  {{- 'newsletter.success' | t }}
+                </h3>
+              {%- endif -%}
+            {% endform %}
+          </div>
+          {% if section.settings.payment-icon %}
+            <div class="payment-icon">
+              <img src="{{ section.settings.payment-icon | img_url: 'master' }}" alt="" class="img-fluid">
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+  <style>
+    .section-{{ section.id }} .news-max-size {
+      background: {{section.settings.bg-color}};
+    }
+  </style>
+
+  <script>
+    var abt_str_area = document.querySelector(".section-newsletter");
+    var bg_popup_body = document.querySelector(".template--index");
+    var close_popup = document.querySelector(".news-popup-close");
+    var delayInMilliseconds = 2500;
+    setTimeout(function() {
+      abt_str_area.classList.add("active");
+      bg_popup_body.classList.add("bgbright-area");
+    }, delayInMilliseconds);
+    close_popup.addEventListener('click', function(e) {
+      abt_str_area.classList.remove("active");
+      bg_popup_body.classList.remove("bgbright-area");
+    });
+  </script>
+
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Home Popup",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "popup-img",
+        "label": "Popup Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "popup-img-mobile",
+        "label": "Popup Mobile Image"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Popup Title"
+      },
+      {
+        "type": "text",
+        "id": "sub-title",
+        "label": "Popup Subtitle"
+      },
+      {
+        "type": "text",
+        "id": "btn-title",
+        "label": "Button Title"
+      },
+      {
+        "type": "image_picker",
+        "id": "payment-icon",
+        "label": "Payment Icon"
+      },
+      {
+        "type": "color",
+        "id": "bg-color",
+        "label": "Background Color"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Home Popup"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

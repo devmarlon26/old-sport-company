@@ -1,0 +1,58 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-404",
+      "settings": {
+      }
+    },
+    "b5972197-2458-42f0-b6f3-9cf2987c37b0": {
+      "type": "collection-list",
+      "blocks": {
+        "template--19650143387938__b5972197-2458-42f0-b6f3-9cf2987c37b0-16886469282bb8b9e0-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "mens"
+          }
+        },
+        "template--19650143387938__b5972197-2458-42f0-b6f3-9cf2987c37b0-16886469282bb8b9e0-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "accessories"
+          }
+        },
+        "template--19650143387938__b5972197-2458-42f0-b6f3-9cf2987c37b0-16886469282bb8b9e0-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "shoes"
+          }
+        },
+        "1c249c5f-1b25-4d7e-bca3-0c2f7d849168": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "womens"
+          }
+        }
+      },
+      "block_order": [
+        "template--19650143387938__b5972197-2458-42f0-b6f3-9cf2987c37b0-16886469282bb8b9e0-0",
+        "template--19650143387938__b5972197-2458-42f0-b6f3-9cf2987c37b0-16886469282bb8b9e0-1",
+        "template--19650143387938__b5972197-2458-42f0-b6f3-9cf2987c37b0-16886469282bb8b9e0-2",
+        "1c249c5f-1b25-4d7e-bca3-0c2f7d849168"
+      ],
+      "settings": {
+        "title": "Since You’re Here, Why Not Check These Out?",
+        "sub-title": "Get Back On Track With Our Needlepoint Loafers & Accessories",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "color_scheme": "background-2",
+        "show_view_all": false,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "main",
+    "b5972197-2458-42f0-b6f3-9cf2987c37b0"
+  ]
+}

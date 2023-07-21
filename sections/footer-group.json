@@ -1,0 +1,104 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "c86fee19-d33f-4de5-a4a4-f01815f94d27": {
+      "type": "newsletter",
+      "blocks": {
+        "d4a0426e-c122-4502-9048-a8f833535336": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<h5>Get Exclusive Access  to <strong>Special Offers<\/strong><\/h5>"
+          }
+        },
+        "sections--19650144010530__c86fee19-d33f-4de5-a4a4-f01815f94d27-1688471956c13bc227-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join The Old Sport Club",
+            "heading_size": "h1"
+          }
+        },
+        "sections--19650144010530__c86fee19-d33f-4de5-a4a4-f01815f94d27-1688471956c13bc227-1": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Sign up today to be first in line for pre-lanunches and exclusive deals.7<\/p>"
+          }
+        },
+        "sections--19650144010530__c86fee19-d33f-4de5-a4a4-f01815f94d27-1688471956c13bc227-2": {
+          "type": "email_form",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "d4a0426e-c122-4502-9048-a8f833535336",
+        "sections--19650144010530__c86fee19-d33f-4de5-a4a4-f01815f94d27-1688471956c13bc227-0",
+        "sections--19650144010530__c86fee19-d33f-4de5-a4a4-f01815f94d27-1688471956c13bc227-1",
+        "sections--19650144010530__c86fee19-d33f-4de5-a4a4-f01815f94d27-1688471956c13bc227-2"
+      ],
+      "settings": {
+        "color_scheme": "inverse",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "7d39cec7-1185-4675-ac76-f356b098a009": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true
+          }
+        },
+        "a270d0c4-5452-4017-b4ec-ec30c69f8204": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Main Menu",
+            "menu": "footer"
+          }
+        },
+        "27eb96c8-7ad6-490e-a953-10e5b27f327c": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Penny Loafers",
+            "menu": "penny-loafers"
+          }
+        },
+        "18ca8054-f86a-4f59-9651-944013eb287c": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Collections",
+            "menu": "collections"
+          }
+        }
+      },
+      "block_order": [
+        "7d39cec7-1185-4675-ac76-f356b098a009",
+        "a270d0c4-5452-4017-b4ec-ec30c69f8204",
+        "27eb96c8-7ad6-490e-a953-10e5b27f327c",
+        "18ca8054-f86a-4f59-9651-944013eb287c"
+      ],
+      "settings": {
+        "color_scheme": "accent-2",
+        "newsletter_enable": false,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": false,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": true,
+        "show_policy": false,
+        "footer_payment_icon": "shopify:\/\/shop_images\/Payment.png",
+        "margin_top": 0,
+        "padding_top": 80,
+        "padding_bottom": 24
+      }
+    }
+  },
+  "order": [
+    "c86fee19-d33f-4de5-a4a4-f01815f94d27",
+    "footer"
+  ]
+}

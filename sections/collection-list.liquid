@@ -1,0 +1,251 @@
+{{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.50 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.50 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+
+{% capture 'swiper-slider-blocks' %}
+  {%- for block in section.blocks -%}
+    <div
+      class="swiper-slide collection-list__item grid__items {% if block.settings.collection.featured_image == nil %} collection-list__item--no-media{% endif %}"
+    >
+      {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
+      {%- assign placeholder_image = 'collection-apparel-' | append: placeholder_image_index -%}
+      {% render 'card-collection',
+        card_collection: block.settings.collection,
+        media_aspect_ratio: section.settings.image_ratio,
+        placeholder_image: placeholder_image
+      %}
+    </div>
+  {%- endfor -%}
+{% endcapture %}
+
+
+{%- liquid
+  assign columns_mobile_int = section.settings.columns_mobile | plus: 0
+  assign show_mobile_slider = false
+  if section.settings.swipe_on_mobile and section.blocks.size > columns_mobile_int
+    assign show_mobile_slider = true
+  endif
+-%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="collection-list-wrapper isolate{% if show_mobile_slider %} page-width-desktop{% endif %}{% if section.settings.title == blank %} no-heading{% endif %}{% if section.settings.show_view_all == false or section.blocks.size > collections.size %} no-mobile-link{% endif %} section-{{ section.id }}-padding">
+
+    <div class="page-width">
+      {%- unless section.settings.title == blank -%}
+        <div class="title-wrapper-with-link{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin">
+          <h2
+            id="SectionHeading-{{ section.id }}"
+            class="collection-list-title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          >
+            {{ section.settings.title }}
+          </h2>
+  
+          {% if section.settings.sub-title %}
+            <div class="subtitle-block">{{ section.settings.sub-title }}</div>
+          {% endif %}
+  
+          {%- if section.settings.show_view_all and show_mobile_slider -%}
+            <a
+              href="{{ routes.collections_url }}"
+              id="ViewAll-{{ section.id }}"
+              class="link underlined-link large-up-hide{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+              aria-labelledby="ViewAll-{{ section.id }} SectionHeading-{{ section.id }}"
+            >
+              {{- 'sections.collection_list.view_all' | t -}}
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endunless -%}
+    </div>
+    
+    <div class="slider-desk small-hide">
+      <div class="collection-list contains-card contains-card--collection">
+        <div class="swiper-wrapper">
+          {{ swiper-slider-blocks }}
+        </div>
+        <div class="slider__controls">
+          <div class="swiper-button-prev swiper-slider-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none"><circle cx="25" cy="25" r="24.5" transform="matrix(-1 0 0 1 50 0)" fill="white" stroke="#203D5F"/><path d="M16.4697 25.5303C16.1768 25.2374 16.1768 24.7626 16.4697 24.4697L21.2426 19.6967C21.5355 19.4038 22.0104 19.4038 22.3033 19.6967C22.5962 19.9896 22.5962 20.4645 22.3033 20.7574L18.0607 25L22.3033 29.2426C22.5962 29.5355 22.5962 30.0104 22.3033 30.3033C22.0104 30.5962 21.5355 30.5962 21.2426 30.3033L16.4697 25.5303ZM33 25.75H17V24.25H33V25.75Z" fill="#203D5F"/></svg></div>
+          <div class="swiper-button-next swiper-slider-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none"><circle cx="25" cy="25" r="24.5" fill="#203D5F" stroke="#203D5F"/><path d="M33.5303 25.5303C33.8232 25.2374 33.8232 24.7626 33.5303 24.4697L28.7574 19.6967C28.4645 19.4038 27.9896 19.4038 27.6967 19.6967C27.4038 19.9896 27.4038 20.4645 27.6967 20.7574L31.9393 25L27.6967 29.2426C27.4038 29.5355 27.4038 30.0104 27.6967 30.3033C27.9896 30.5962 28.4645 30.5962 28.7574 30.3033L33.5303 25.5303ZM17 25.75H33V24.25H17V25.75Z" fill="white"/></svg></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slider-desk small-show">
+      <div class="collection-list-mobile">
+        <div class="swiper-wrapper">
+          {{ swiper-slider-blocks }}
+        </div>
+        <div class="slider__controls">
+          <div class="slider__pagination"></div>
+          <div class="swiper-button-prev swiper-slider-arrow"><svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.53674e-07 12.0033C9.53674e-07 12.2883 0.0854473 12.5667 0.236621 12.7788L7.23662 23.3637C7.48639 23.7481 7.90704 24 8.4 24H12.6C13.369 24 14 23.3637 14 22.5882C14 22.3032 13.9146 22.0249 13.7634 21.8128L7.28263 12.0033L13.7634 2.18724C13.9146 1.97514 14 1.69677 14 1.41176C14 0.636289 13.369 0 12.6 0H8.4C7.90704 0 7.49296 0.251864 7.23662 0.636288L0.236621 11.2278C0.0854473 11.4333 9.53674e-07 11.7183 9.53674e-07 12.0033Z" fill="black"></path></svg></div>
+          <div class="swiper-button-next swiper-slider-arrow"><svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 12.0033C14 12.2883 13.9146 12.5667 13.7634 12.7788L6.76338 23.3637C6.51361 23.7481 6.09296 24 5.6 24H1.4C0.630986 24 0 23.3637 0 22.5882C0 22.3032 0.085446 22.0249 0.23662 21.8128L6.71737 12.0033L0.23662 2.18724C0.085446 1.97514 0 1.69677 0 1.41176C0 0.636289 0.630986 0 1.4 0H5.6C6.09296 0 6.50704 0.251864 6.76338 0.636288L13.7634 11.2278C13.9146 11.4333 14 11.7183 14 12.0033Z" fill="#1C3032"></path></svg></div>
+        </div>
+      </div>
+    </div>
+
+    {%- if section.settings.show_view_all and section.blocks.size < collections.size -%}
+      <div
+        class="center collection-list-view-all{% if show_mobile_slider %} small-hide medium-hide{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+        {% if settings.animations_reveal_on_scroll %}
+          data-cascade
+        {% endif %}
+      >
+        <a
+          href="{{ routes.collections_url }}"
+          class="button"
+          id="ViewAllButton-{{ section.id }}"
+          aria-labelledby="ViewAllButton-{{ section.id }} SectionHeading-{{ section.id }}"
+        >
+          {{- 'sections.collection_list.view_all' | t -}}
+        </a>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.collection-list.name",
+  "tag": "section",
+  "class": "section section-collection-list",
+  "max_blocks": 15,
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Collections",
+      "label": "t:sections.collection-list.settings.title.label"
+    },
+    {
+      "type": "text",
+      "id": "sub-title",
+      "label": "Subtitle"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.collection-list.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.collection-list.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.collection-list.settings.image_ratio.options__3.label"
+        }
+      ],
+      "default": "square",
+      "label": "t:sections.collection-list.settings.image_ratio.label",
+      "info": "t:sections.collection-list.settings.image_ratio.info"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "info": "t:sections.all.colors.has_cards_info",
+      "default": "background-1"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "default": false,
+      "label": "t:sections.collection-list.settings.show_view_all.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "featured_collection",
+      "name": "t:sections.collection-list.blocks.featured_collection.name",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.collection-list.presets.name",
+      "blocks": [
+        {
+          "type": "featured_collection"
+        },
+        {
+          "type": "featured_collection"
+        },
+        {
+          "type": "featured_collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

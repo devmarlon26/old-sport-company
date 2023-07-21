@@ -1,0 +1,97 @@
+{% assign sec_set = section.settings %}
+<section class="section-{{ section.id }} slider-icon-area">
+  <div class="page-width">
+    
+    <div class="small-hide">
+      <div class="d-flex">
+        {% for block in section.blocks %}
+          {% assign block_set = block.settings %}
+          <div class="col-size-04">
+            <div class="icon-label-svg">
+              {% if block_set.svg-icon %}<span class="svg-icon">{{ block_set.svg-icon }}</span>{% endif %}
+              {% if block_set.label %}<span class="svg-label">{{ block_set.label }}</span>{% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="small-show">
+      
+      <div class="anouncement-slider">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            {% assign block_set = block.settings %}
+            <div class="swiper-slide">
+              <div class="icon-label-svg">
+                {% if block_set.svg-icon %}<span class="svg-icon">{{ block_set.svg-icon }}</span>{% endif %}
+                {% if block_set.label %}<span class="svg-label">{{ block_set.label }}</span>{% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="slider__controls">
+          <div class="swiper-button-prev swiper-slider-arrow"><svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.53674e-07 12.0033C9.53674e-07 12.2883 0.0854473 12.5667 0.236621 12.7788L7.23662 23.3637C7.48639 23.7481 7.90704 24 8.4 24H12.6C13.369 24 14 23.3637 14 22.5882C14 22.3032 13.9146 22.0249 13.7634 21.8128L7.28263 12.0033L13.7634 2.18724C13.9146 1.97514 14 1.69677 14 1.41176C14 0.636289 13.369 0 12.6 0H8.4C7.90704 0 7.49296 0.251864 7.23662 0.636288L0.236621 11.2278C0.0854473 11.4333 9.53674e-07 11.7183 9.53674e-07 12.0033Z" fill="black"></path></svg></div>
+          <div class="swiper-button-next swiper-slider-arrow"><svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 12.0033C14 12.2883 13.9146 12.5667 13.7634 12.7788L6.76338 23.3637C6.51361 23.7481 6.09296 24 5.6 24H1.4C0.630986 24 0 23.3637 0 22.5882C0 22.3032 0.085446 22.0249 0.23662 21.8128L6.71737 12.0033L0.23662 2.18724C0.085446 1.97514 0 1.69677 0 1.41176C0 0.636289 0.630986 0 1.4 0H5.6C6.09296 0 6.50704 0.251864 6.76338 0.636288L13.7634 11.2278C13.9146 11.4333 14 11.7183 14 12.0033Z" fill="#1C3032"></path></svg></div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+
+<style>
+  .svg-icon path, .svg-icon g,
+  .svg-icon {fill: {{sec_set.label-color}};}
+  .svg-label {color: {{sec_set.label-color}};}
+  .section-{{ section.id }} {background-color: {{ sec_set.bg-color }};}
+</style>
+
+{% schema %}
+  {
+    "name": "Slider Icon",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg-color",
+        "label": "Background Color"
+      },
+      {
+        "type": "color",
+        "id": "label-color",
+        "label": "Text Color"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Icon Label",
+        "type": "icon-label",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "svg-icon",
+            "label": "SVG Icon"
+          },
+          {
+            "type": "text",
+            "id": "label",
+            "label": "Label"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Icon Slider"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

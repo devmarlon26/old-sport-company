@@ -1,0 +1,81 @@
+{
+  "sections": {
+    "cart-items": {
+      "type": "main-cart-items",
+      "blocks": {
+        "a46afad1-dc52-49a0-a2d3-1651ac7baa4e": {
+          "type": "subtotal",
+          "settings": {
+          }
+        },
+        "88b41214-794f-4fdd-a9bc-5d0b97238883": {
+          "type": "buttons",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "a46afad1-dc52-49a0-a2d3-1651ac7baa4e",
+        "88b41214-794f-4fdd-a9bc-5d0b97238883"
+      ],
+      "settings": {
+        "payment_icon": "shopify:\/\/shop_images\/Payment_2.png",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "cart-footer": {
+      "type": "main-cart-footer",
+      "disabled": true,
+      "blocks": {
+        "subtotal": {
+          "type": "subtotal",
+          "settings": {
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "subtotal",
+        "buttons"
+      ],
+      "settings": {
+      }
+    },
+    "5e4ec703-d2ba-487b-a71a-8d7ee695e809": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "You May Also Like",
+        "heading_size": "h1",
+        "description": "<p>Some kind of emotive sub header relating to the above goes here<\/p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "accessories",
+        "products_to_show": 5,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-2",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_shop_btn": true,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "cart-items",
+    "cart-footer",
+    "5e4ec703-d2ba-487b-a71a-8d7ee695e809"
+  ],
+  "wrapper": "div.cart-templates-sections"
+}

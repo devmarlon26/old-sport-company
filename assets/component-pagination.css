@@ -1,0 +1,74 @@
+.pagination-wrapper {
+  margin-top: 4rem;
+}
+
+@media screen and (min-width: 990px) {
+  .pagination-wrapper {
+    margin-top: 5rem;
+  }
+}
+
+.pagination__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pagination__list > li {
+  flex: 1 0 4.4rem;
+  max-width: 4.4rem;
+}
+
+.pagination__list > li:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.pagination__item {
+  color: rgb(var(--color-foreground));
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 4.4rem;
+  width: 100%;
+  padding: 0;
+  text-decoration: none;
+}
+
+a.pagination__item:hover::after {
+  height: 0.1rem;
+}
+
+.pagination__item--next .icon {
+  transform: rotate(180deg);
+}
+
+.pagination-wrapper .pagination__item {
+  font-family: Museo Sans;
+  font-size: 16px;
+  line-height: normal;
+  color: #B8B8B8;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  border: 1px solid #96A3B2;
+}
+
+.pagination-wrapper .pagination__item.pagination__item--current {
+  border-color: #34A853;
+  background: #34A853;
+  color: #fff;
+}
+
+.pagination-wrapper .pagination__item .pagination__item-arrow {border: 0;}
+
+.pagination__item--prev .icon {
+  transform: rotate(-90deg);
+  width: 40px;
+  height: auto;
+  transform: none;
+}
+
+.pagination__item-arrow:hover::after {
+  display: none;
+}

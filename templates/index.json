@@ -1,0 +1,370 @@
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "2cc301c7-cfec-49cd-92f2-a3fae2cc37e3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BG.png",
+            "image_mobile": "shopify:\/\/shop_images\/Rectangle_293.png",
+            "review-text": "Rated <b>5.0<\/b> Based on <b>1,000+<\/b> Happy Customers",
+            "heading": "Hand stitched & high quality",
+            "heading_size": "h0",
+            "text-color": "#203d5f",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing<\/p>",
+            "text_style": "body",
+            "p-text-color": "#203d5f",
+            "button_label_1": "Shop Men",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "Shop Women",
+            "button_link_2": "#",
+            "button_style_secondary_2": false,
+            "payment-icon": "shopify:\/\/shop_images\/Payment.png"
+          }
+        },
+        "6fdc318c-98ee-4029-afed-7fe4df1e028c": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BG.png",
+            "image_mobile": "shopify:\/\/shop_images\/Rectangle_293.png",
+            "review-text": "Rated 5 out of 5 by 1000s of Customers",
+            "heading": "Loafers & Lifestyle Accessories",
+            "heading_size": "h0",
+            "text-color": "#244162",
+            "text": "<p>Give customers details about the banner image(s) or content on the template.<\/p>",
+            "text_style": "body",
+            "p-text-color": "#244162",
+            "button_label_1": "Button label",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "#",
+            "button_style_secondary_2": false,
+            "payment-icon": "shopify:\/\/shop_images\/Payment.png"
+          }
+        }
+      },
+      "block_order": [
+        "2cc301c7-cfec-49cd-92f2-a3fae2cc37e3",
+        "6fdc318c-98ee-4029-afed-7fe4df1e028c"
+      ],
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_shop_btn": true,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "f3f03a94-d33b-42fb-9b76-26614ea765ac": {
+      "type": "collection-list",
+      "blocks": {
+        "template--19650143551778__f3f03a94-d33b-42fb-9b76-26614ea765ac-1688461228f539bd97-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "mens"
+          }
+        },
+        "template--19650143551778__f3f03a94-d33b-42fb-9b76-26614ea765ac-1688461228f539bd97-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "womens"
+          }
+        },
+        "template--19650143551778__f3f03a94-d33b-42fb-9b76-26614ea765ac-1688461228f539bd97-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "accessories"
+          }
+        },
+        "8dca1f58-57d9-4b4f-983a-9ff6995b8d09": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "shoes"
+          }
+        }
+      },
+      "block_order": [
+        "template--19650143551778__f3f03a94-d33b-42fb-9b76-26614ea765ac-1688461228f539bd97-0",
+        "template--19650143551778__f3f03a94-d33b-42fb-9b76-26614ea765ac-1688461228f539bd97-1",
+        "template--19650143551778__f3f03a94-d33b-42fb-9b76-26614ea765ac-1688461228f539bd97-2",
+        "8dca1f58-57d9-4b4f-983a-9ff6995b8d09"
+      ],
+      "settings": {
+        "title": "Emotive collections heading",
+        "sub-title": "Some kind of emotive sub header relating to the above goes here",
+        "heading_size": "h0",
+        "image_ratio": "square",
+        "color_scheme": "background-2",
+        "show_view_all": false,
+        "padding_top": 100,
+        "padding_bottom": 80
+      }
+    },
+    "602d2136-90df-40c7-8801-d8b71c761fb0": {
+      "type": "how-made",
+      "blocks": {
+        "3ecb0564-dbd3-4f0a-a1cf-44a6574e105f": {
+          "type": "made-blocks",
+          "settings": {
+            "mad-img": "shopify:\/\/shop_images\/2_MDU5NzY_460x_1616b0fc-efdd-46c8-9830-184ac9573dda.webp",
+            "number": "1",
+            "title": "100% hand-stitched",
+            "content": "It all begins with one single thread. One panel requires 6-8 hours to hand-stitch, and up to 16 hours per pair. Our artisians display steadfast patience, and intense focus as their needle is pushed through each small opening in the canvas."
+          }
+        },
+        "e1260d78-bf3e-4107-bf24-524fb222f167": {
+          "type": "made-blocks",
+          "settings": {
+            "mad-img": "shopify:\/\/shop_images\/29Z_0012669_460x_978cdcf3-4c31-406a-9d17-bd670204190d.webp",
+            "number": "2",
+            "title": "Craftsmanship",
+            "content": "Our needlepoint panels are then sent to our craftsmen who hand select the finest, and supple calf skin leather. Once selected our loafers are assembled the old fashioned way - by hand."
+          }
+        },
+        "f90b91e9-0080-4d61-ace7-4ccfde2dab7b": {
+          "type": "made-blocks",
+          "settings": {
+            "mad-img": "shopify:\/\/shop_images\/hand_copy_460x_e9ed72a0-26c5-48d1-b17a-1e85053508ae.webp",
+            "number": "3",
+            "title": "The Old Sport Deal",
+            "content": "When you buy anything from Old Sport Company, if you aren't happy, we're not done, and we mean it. We're here for you because, for us, business is always personal. Deal?"
+          }
+        }
+      },
+      "block_order": [
+        "3ecb0564-dbd3-4f0a-a1cf-44a6574e105f",
+        "e1260d78-bf3e-4107-bf24-524fb222f167",
+        "f90b91e9-0080-4d61-ace7-4ccfde2dab7b"
+      ],
+      "settings": {
+        "bg-color": "#ffffff",
+        "text-color": "#203d5f",
+        "title": "How It's Made",
+        "sub-title": "Some kind of emotive sub header relating to the above goes here",
+        "btn-label-1": "Shop Men",
+        "btn-link-1": "#",
+        "btn-label-2": "Shop Women",
+        "btn-link-2": "#",
+        "payment-icon": "shopify:\/\/shop_images\/Payment.png",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "afbbf97f-e167-405d-8c90-aec378957360": {
+      "type": "featured-collection-tab",
+      "blocks": {
+        "27f8b819-47ce-4b55-b378-86b24697b3e7": {
+          "type": "tab-blocks",
+          "settings": {
+            "collection-tab": "Men",
+            "collection": "accessories"
+          }
+        },
+        "c96a7538-b921-4a5b-aa97-9bf03cc7ccfd": {
+          "type": "tab-blocks",
+          "settings": {
+            "collection-tab": "Women",
+            "collection": "mens"
+          }
+        }
+      },
+      "block_order": [
+        "27f8b819-47ce-4b55-b378-86b24697b3e7",
+        "c96a7538-b921-4a5b-aa97-9bf03cc7ccfd"
+      ],
+      "settings": {
+        "title": "Best Sellers",
+        "heading_size": "h1",
+        "description": "<p>Check Out Loafers & Accessories In High Demand<\/p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "accessories",
+        "products_to_show": 25,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "background-2",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "show_shop_btn": true,
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "5218989d-e879-4bf4-a722-85a138c4f6e1": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--19650143551778__5218989d-e879-4bf4-a722-85a138c4f6e1-1688465259c13a7a48-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Lorem ipsum dolor sit amet, adipiscing elit?",
+            "row_content": "<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<\/p>",
+            "page": ""
+          }
+        },
+        "template--19650143551778__5218989d-e879-4bf4-a722-85a138c4f6e1-1688465259c13a7a48-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I Have To Pay For Shipping?",
+            "row_content": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.<\/p>",
+            "page": ""
+          }
+        },
+        "template--19650143551778__5218989d-e879-4bf4-a722-85a138c4f6e1-1688465259c13a7a48-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What Sets Old Sport Company's Products Apart?",
+            "row_content": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.<\/p>",
+            "page": ""
+          }
+        },
+        "template--19650143551778__5218989d-e879-4bf4-a722-85a138c4f6e1-1688465259c13a7a48-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What Can I Expect From The Old Sport Company's Customer Service?",
+            "row_content": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.<\/p>",
+            "page": ""
+          }
+        },
+        "69c040cf-24c8-47f7-ba6b-adf2a9257509": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I Buy Custom Orders In Bulk?",
+            "row_content": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.<\/p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19650143551778__5218989d-e879-4bf4-a722-85a138c4f6e1-1688465259c13a7a48-0",
+        "template--19650143551778__5218989d-e879-4bf4-a722-85a138c4f6e1-1688465259c13a7a48-1",
+        "template--19650143551778__5218989d-e879-4bf4-a722-85a138c4f6e1-1688465259c13a7a48-2",
+        "template--19650143551778__5218989d-e879-4bf4-a722-85a138c4f6e1-1688465259c13a7a48-3",
+        "69c040cf-24c8-47f7-ba6b-adf2a9257509"
+      ],
+      "settings": {
+        "caption": "We’ve Got You Covered!",
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "row",
+        "color_scheme": "background-2",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": true,
+        "image": "shopify:\/\/shop_images\/needlepoint-penny-loafers_copy_1.png",
+        "image_ratio": "large",
+        "desktop_layout": "image_first",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "6b653ce1-9889-4ac1-933d-ebda84af5d09": {
+      "type": "image-banner_copy",
+      "disabled": true,
+      "blocks": {
+        "e70e2db7-2985-4702-aab2-55aff0ff387a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BG.png",
+            "image_mobile": "shopify:\/\/shop_images\/Rectangle_293.png",
+            "review-text": "",
+            "heading": "Image banner s",
+            "heading_size": "h1",
+            "text-color": "",
+            "text": "",
+            "text_style": "body",
+            "p-text-color": "",
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "cda9993a-f48e-4669-ac1f-6d3372f024f9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/BG.png",
+            "image_mobile": "shopify:\/\/shop_images\/Rectangle_293.png",
+            "review-text": "",
+            "heading": "Image banner s",
+            "heading_size": "h1",
+            "text-color": "",
+            "text": "",
+            "text_style": "body",
+            "p-text-color": "",
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "e70e2db7-2985-4702-aab2-55aff0ff387a",
+        "cda9993a-f48e-4669-ac1f-6d3372f024f9"
+      ],
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "featured_collection",
+    "f3f03a94-d33b-42fb-9b76-26614ea765ac",
+    "602d2136-90df-40c7-8801-d8b71c761fb0",
+    "afbbf97f-e167-405d-8c90-aec378957360",
+    "5218989d-e879-4bf4-a722-85a138c4f6e1",
+    "6b653ce1-9889-4ac1-933d-ebda84af5d09"
+  ]
+}

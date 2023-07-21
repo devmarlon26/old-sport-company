@@ -1,0 +1,215 @@
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.50 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.50 | round: 0 }}px;
+    background-color: {{section.settings.bg-color}};
+  }
+
+  .mad-title, .mad-content,
+  .section-{{ section.id }}-padding .hwd-md-subtitle,
+  .section-{{ section.id }}-padding .hwd-md-title {
+    color: {{ section.settings.text-color }}
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<section class="section-how-mad-block section-{{ section.id }}-padding" id="section-{{ section.id }}">
+  <div class="page-width">
+    {% if section.settings.title %}
+      <h1 class="hwd-md-title">{{ section.settings.title }}</h1>
+    {% endif %}
+    {% if section.settings.sub-title %}
+      <div class="hwd-md-subtitle">{{ section.settings.sub-title }}</div>
+    {% endif %}
+
+    <div class="hwd-block-top-space">
+      <div class="row">
+        {% for block in section.blocks %}
+          <div class="col-size-3">
+            
+            <div class="sm-d-flex">
+              
+              <div class="sm-d-40 image_made">
+                {% if block.settings.mad-img %}
+                <div class="col-img">
+                  <img src="{{ block.settings.mad-img | img_url: 'master' }}" alt="" class="img-fluid" />
+                </div>
+                {% endif %}
+                {% if block.settings.number %}
+                <div class="mad-number">
+                  {{ block.settings.number }}
+                </div>
+                {% endif %}
+              </div>
+              
+              <div class="sm-d-60 description_made">
+                {% if block.settings.title %}
+                <div class="mad-title">
+                  {{ block.settings.title }}
+                </div>
+                {% endif %}
+                {% if block.settings.content %}
+                <div class="mad-content">
+                  {{ block.settings.content }}
+                </div>
+                {% endif %}
+              </div>
+              
+            </div>
+            
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="hwd-mad-bottom-btn">
+      <div class="btn-area banner__buttons banner__buttons--multiple">
+        {% if section.settings.btn-link-1 %}
+          <a href="{{ section.settings.btn-link-1 }}" class="button button--primary">
+          {{ section.settings.btn-label-1 }} <span class="pl-8"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+  <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="white"/>
+</svg></span>
+          </a>
+        {% endif %}
+        {% if section.settings.btn-link-2 %}
+          <a href="{{ section.settings.btn-link-2 }}" class="button button--primary">
+            {{ section.settings.btn-label-2 }} <span class="pl-8"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+  <path d="M16.7071 8.70711C17.0976 8.31658 17.0976 7.68342 16.7071 7.29289L10.3431 0.928932C9.95262 0.538408 9.31946 0.538408 8.92893 0.928932C8.53841 1.31946 8.53841 1.95262 8.92893 2.34315L14.5858 8L8.92893 13.6569C8.53841 14.0474 8.53841 14.6805 8.92893 15.0711C9.31946 15.4616 9.95262 15.4616 10.3431 15.0711L16.7071 8.70711ZM0 9H16V7H0V9Z" fill="white"/>
+</svg></span>
+          </a>
+        {% endif %}
+      </div>
+      {% if section.settings.payment-icon %}
+        <div class="payment-icon"><img src="{{ section.settings.payment-icon | img_url: 'master' }}" alt="" class="img-fluid"></div>
+      {% endif %}
+    </div>
+    
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "How Made",
+    "tag": "section",
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    },
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg-color",
+        "label": "Background Color"
+      },
+      {
+        "type": "color",
+        "id": "text-color",
+        "label": "Label Color"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "sub-title",
+        "label": "Sub Title"
+      },
+      {
+        "type": "text",
+        "id": "btn-label-1",
+        "label": "Button Label 1"
+      },
+      {
+        "type": "url",
+        "id": "btn-link-1",
+        "label": "Button Link 1"
+      },
+      {
+        "type": "text",
+        "id": "btn-label-2",
+        "label": "Button Label 2"
+      },
+      {
+        "type": "url",
+        "id": "btn-link-2",
+        "label": "Button Link 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "payment-icon",
+        "label": "Payment Icon"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Made Blocks",
+        "type": "made-blocks",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "mad-img",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "number",
+            "label": "Number"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title"
+          },
+          {
+            "type": "textarea",
+            "id": "content",
+            "label": "Content"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "How Made"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
