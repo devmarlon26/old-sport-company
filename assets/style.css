@@ -1757,7 +1757,7 @@ img.img-fluid {
 
 @media screen and (max-width: 768px) {
   .section .banner--large:not(.banner--adapt) {
-    min-height: 110rem !important;
+    min-height: 124rem!important;
   }
   .banner--content-align-left.banner--desktop-transparent .banner__box {
     max-width: 0 !important;
