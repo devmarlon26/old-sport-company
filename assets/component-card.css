@@ -198,6 +198,10 @@ font-style: normal;
 font-weight: 600;
 line-height: normal;
 }
+.quick-add__submit {
+  border-radius: 1000px;
+  background: #D19101;
+}
 .card__heading:last-child {
   margin-bottom: 0;
 }
