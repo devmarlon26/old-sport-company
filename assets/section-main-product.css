@@ -1449,6 +1449,9 @@ a.product__text {
   flex-direction: row;
   width: 40%;
 }
+.icon-with-text--horizontal .icon-with-text__item:first-child img {
+  width: 40%;
+}
 .icon-with-text--horizontal .icon-with-text__item {
   flex-direction: row;
   width: 30%;
