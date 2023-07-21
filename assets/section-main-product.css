@@ -15,6 +15,8 @@
   line-height: 23px; /* 209.091% */
   text-decoration-line: underline;
   text-transform: uppercase;
+  margin-bottom: 2px;
+  margin-left: 16px;
 }
 .product--no-media {
   max-width: 57rem;
