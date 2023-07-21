@@ -113,6 +113,18 @@
                   </h2>
                   <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }} style="color: {{ block.settings.p-text-color }}">
                     <p>{{ block.settings.text }}</p>
+                    <ul class="banner__list">
+                  {% for block in section.blocks %}
+                    {% if block.type == "List" %}
+                      <li class="banner__list-item"> {% render 'checked' %} {{ block.settings.banner_list }}</li>
+                    {% endif %}
+                    {% assign countBlocks = section.blocks | where: 'type', 'List' %}
+                        {% assign countBlockCount = countBlocks | size %}
+                        {% if countBlockCount >= block.limit %}
+                        {% break %}
+                      {% endif %}
+                  {% endfor %}
+                    </ul>
                   </div>
                   <div
                     class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}"
@@ -358,6 +370,19 @@
     }
   ],
   "blocks": [
+    
+    {
+      "type": "List",
+      "name": "List",
+      "limit": 3 ,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "banner_list",
+          "label": "Review Label"
+        }
+      ]
+    },
     {
       "type": "image",
       "name": "Image",
