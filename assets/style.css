@@ -1805,7 +1805,7 @@ img.img-fluid {
     margin-bottom: -0.1rem;
   }
   .banner-slider-block .slider__pagination {
-    bottom: 45%;
+    bottom: 40%;
     transform: translateY(-50%);
   }
   .banner-slider-block .swiper-button-next,

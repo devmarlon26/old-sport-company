@@ -370,7 +370,9 @@
   width: 100%;
   height: 100%;
 }
-
+ul.banner__list {
+  padding: 0;
+}
 .banner__box > * + .banner__text {
   margin-top: 1.5rem;
 }
