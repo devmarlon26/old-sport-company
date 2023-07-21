@@ -2117,7 +2117,7 @@ img.img-fluid {
     font-size: 14px;
   }
   .banner--large:not(.banner--adapt) {
-    min-height: 55rem!important;
+    min-height: 60rem!important;
 }
   .banner__heading {
     font-size: 50px;
