@@ -13,6 +13,7 @@
 
 ul.banner__list {
   list-style-type: none !important;
+  padding: 0 !important;
 }
 
 .product__media-wrapper {
