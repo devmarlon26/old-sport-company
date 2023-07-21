@@ -236,7 +236,15 @@
                 block: block,
                 share_link: share_url
               %}
-
+              <ul class="usp_parent" style="list-style-type: circle">
+                {% for metafield in product.metafields.custom %}
+                  {% assign list = "product_list_" | append: forloop.index %}
+                  {% assign custom_field = product.metafields.custom[list] %}
+                  {% if custom_field != blank %}
+                    <li class="usp-heading">{{ custom_field }}</li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
             {%- when 'variant_picker' -%}
               <div class="product-variant-picker-section">
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
