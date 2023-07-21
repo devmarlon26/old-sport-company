@@ -135,7 +135,7 @@ $( document ).ready(function() {
     $('.section-size').hide();
   });
   
-  $('.product__accordion .accordion__list:first-child').attr('open', 'open');
+  $('.product__info-wrapper .product__accordion:nth-child(12) details.accordion__list').attr('open', 'open');
 });
 
 swiper_7 = new Swiper(".cart-drawer_collection", {
