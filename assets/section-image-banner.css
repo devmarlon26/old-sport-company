@@ -415,6 +415,15 @@
 ul.banner__list {
   list-style-type: none;
 }
+.banner__list-item {
+  color: #203D5F;
+  font-family: Museo Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: capitalize;
+}
 .banner__box .banner__heading + * {
   margin-top: 1rem;
 }
