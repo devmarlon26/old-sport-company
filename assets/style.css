@@ -2166,7 +2166,7 @@ img.img-fluid {
 }
 @media screen and (max-width: 375px) {
   .banner-slider-block .slider__pagination {
-    bottom: 55%;
+    bottom: 63%;
   }
   .section .banner--large:not(.banner--adapt) {
     min-height: 100rem!important;
