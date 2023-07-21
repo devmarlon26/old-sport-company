@@ -196,6 +196,21 @@ font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;
   top: 0;
   bottom: 0;
 }
+
+.size_guide {
+  color: #0258E8;
+  text-align: right;
+  font-family: Museo Sans;
+  font-size: 11px;
+  font-style: normal;
+  text-align: center !important;
+  font-weight: 400;
+  line-height: 23px; /* 209.091% */
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  margin-left: 16px;
+}
 .featured-collection-1.featured-collection .swiper-button-prev {left: 70px;}
 .featured-collection-1.featured-collection .swiper-button-next {right: 70px;}
 .featured-collection-1 .tab-slider-coll {
