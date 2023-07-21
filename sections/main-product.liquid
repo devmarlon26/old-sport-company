@@ -178,12 +178,20 @@
                 {%- endif -%}
               </p>
             {%- when 'description' -%}
-              {%- if product.description != blank -%}
+              {%- if product.description != blank -%} 
                 <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                   {{ product.description }}
                 </div>
               {%- endif -%}
-              asdasdas
+              <ul class="usp_parent" style="list-style-type: circle">
+                {% for metafield in product.metafields.custom %}
+                  {% assign list = "product_list_" | append: forloop.index %}
+                  {% assign custom_field = product.metafields.custom[list] %}
+                  {% if custom_field != blank %}
+                    <li class="usp-heading">{{ custom_field }}</li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
             {%- when 'sku' -%}
               <p
                 class="product__sku no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
