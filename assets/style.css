@@ -1943,7 +1943,7 @@ img.img-fluid {
     height: 40px;
   }
   .section .banner--large:not(.banner--adapt) {
-    min-height: 95rem!important;
+    min-height: 100rem!important;
   }
   
   .collection-list-wrapper .title-wrapper-with-link .collection-list-title {font-size: 34px; line-height: 38px;}
