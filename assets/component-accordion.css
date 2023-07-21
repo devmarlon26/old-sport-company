@@ -27,11 +27,12 @@
 }
 
 .accordion__title {
-  display: inline-block;
-  max-width: calc(100% - 6rem);
-  min-height: 1.6rem;
-  margin: 0;
-  word-break: break-word;
+  color: #203D5F;
+  font-family: Museo Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 35px; /* 250% */
   text-transform: uppercase;
 }
 
