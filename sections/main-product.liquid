@@ -188,7 +188,7 @@
                   {% assign list = "product_list_" | append: forloop.index %}
                   {% assign custom_field = product.metafields.custom[list] %}
                   {% if custom_field != blank %}
-                    <li class="usp-heading">{{ custom_field }}</li>
+                    <li class="banner__list-item"> {% render 'checked' %} {{ custom_field }}</li>
                   {% endif %}
                 {% endfor %}
               </ul>
