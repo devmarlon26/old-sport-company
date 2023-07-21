@@ -2192,5 +2192,8 @@ li.banner__list-item {
   } 
   .section .banner--large:not(.banner--adapt) {
     min-height: 100rem!important;
+  }li.banner__list-item {
+    width: 320px;
+    margin: auto;
   }
 }
