@@ -412,7 +412,9 @@
 .banner__heading {
   margin: 0;
 }
-
+ul.banner__list {
+  list-style-type: none;
+}
 .banner__box .banner__heading + * {
   margin-top: 1rem;
 }
