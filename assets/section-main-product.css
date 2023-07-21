@@ -10,6 +10,18 @@ legend.form__label.layout {
   display: flex;
   align-items: center;
 }
+.section-size {
+  position: fixed;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 111;
+    display: none;
+}
+.section-size.active {
+  display: block;
+}
 .size_guide {
   color: #0258E8;
   text-align: right;
