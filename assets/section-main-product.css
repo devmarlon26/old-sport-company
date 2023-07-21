@@ -1445,10 +1445,13 @@ a.product__text {
   display: flex;
   align-items: center;
 }
-
+.icon-with-text--horizontal .icon-with-text__item:first-child {
+  flex-direction: row;
+  width: 40%;
+}
 .icon-with-text--horizontal .icon-with-text__item {
   flex-direction: row;
-  width: 33%;
+  width: 30%;
 }
 
 .icon-with-text--vertical .icon-with-text__item {
