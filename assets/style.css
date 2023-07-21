@@ -1782,6 +1782,9 @@ img.img-fluid {
     margin: 0 auto;
     text-align: center;
   }
+  .banner__list {
+    list-style-type: none;
+  }
   .banner__content-position,
   .section .banner .banner-slider-block .banner__media,
   .banner .banner-slider-block .banner__media .banner__content,
