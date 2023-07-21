@@ -118,6 +118,11 @@
                     {% if block.type == "List" %}
                       <li class="banner__list-item"> {% render 'checked' %} {{ block.settings.banner_list }}</li>
                     {% endif %}
+                    {% assign countBlocks = section.blocks | where: 'type', 'List' %}
+                        {% assign countBlockCount = countBlocks | size %}
+                        {% if countBlockCount >= block.limit %}
+                        {% break %}
+                      {% endif %}
                   {% endfor %}
                     </ul>
                   </div>
@@ -369,6 +374,7 @@
     {
       "type": "List",
       "name": "List",
+      "limit": 2 ,
       "settings": [
         {
           "type": "richtext",
