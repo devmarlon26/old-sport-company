@@ -13,6 +13,7 @@
   transform: perspective(0);
 }
 
+
 @media only screen and (max-width: 749px) {
   .banner--content-align-mobile-right .banner__box {
     text-align: right;
@@ -131,7 +132,12 @@
     justify-content: flex-end;
   }
 }
-
+@media only screen and (max-width: 425px) {
+  .banner__list-item p {
+    margin: 0;
+    font-size: 14px;
+  }
+}
 @media screen and (max-width: 749px) {
   .banner:not(.banner--stacked) {
     flex-direction: row;
