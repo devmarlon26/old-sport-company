@@ -63,7 +63,7 @@
             "block_heading": "Add any of these to your order to complete the look:",
             "make_collapsible_row": false,
             "icon": "price_tag",
-            "product_list_limit": 3,
+            "product_list_limit": 4,
             "products_per_page": 3,
             "pagination_style": "numbers",
             "image_ratio": "portrait",
