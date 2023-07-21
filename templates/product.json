@@ -50,10 +50,13 @@
           "settings": {
             "layout": "horizontal",
             "icon_1": "heart",
+            "image_1": "shopify:\/\/shop_images\/free-shipping_1.png",
             "heading_1": "Heading",
             "icon_2": "return",
+            "image_2": "shopify:\/\/shop_images\/image_5.png",
             "heading_2": "Heading",
             "icon_3": "truck",
+            "image_3": "shopify:\/\/shop_images\/image_6.png",
             "heading_3": "Heading"
           }
         },
