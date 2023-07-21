@@ -1782,7 +1782,7 @@ img.img-fluid {
     margin: 0 auto;
     text-align: center;
   }
-  .banner__list {
+  ul.banner__list {
     list-style-type: none;
   }
   .banner__content-position,
