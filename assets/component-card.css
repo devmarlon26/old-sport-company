@@ -190,7 +190,14 @@ border: 1px solid #D4D4D4;
   font-weight: 600;
   line-height: normal;
 }
-
+span.price-item.price-item--regular {
+  color: #666;
+font-family: Museo Sans;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
 .card__heading:last-child {
   margin-bottom: 0;
 }
