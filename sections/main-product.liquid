@@ -79,6 +79,14 @@
               >
                 {{- block.settings.text -}}
               </p>
+            {%- when 'custom_rating' -%}
+              <p
+                class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %} custom_rating"
+                {{ block.shopify_attributes }}
+              >
+                {% render 'icon-stars' %}
+                <span>{{- block.settings.text -}}</span>
+              </p>
             {%- when 'title' -%}
               <div class="product__title" {{ block.shopify_attributes }}>
                 <h1>{{ product.title | escape }}</h1>
@@ -114,6 +122,14 @@
                   {{ form | payment_terms }}
                 {%- endform -%}
               </div>
+            {%- when 'shop_pay' -%}
+                <div   
+                  class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %} shop_pay"
+                  {{ block.shopify_attributes }}
+                >
+                  <span>{{- block.settings.text -}}</span>
+                  {% render 'icon-shoppay' %}
+                </div>
             {%- when 'inventory' -%}
               <p
                 class="product__inventory no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
@@ -1914,6 +1930,50 @@
           "default": "Heading",
           "label": "t:sections.main-product.blocks.icon_with_text.settings.heading_3.label",
           "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
+        }
+      ]
+    },
+    {
+      "type": "custom_rating",
+      "name": "Custom Rating",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "text",
+          "default": "Text block",
+          "label": "t:sections.main-product.blocks.text.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            {
+              "value": "body",
+              "label": "t:sections.main-product.blocks.text.settings.text_style.options__1.label"
+            },
+            {
+              "value": "subtitle",
+              "label": "t:sections.main-product.blocks.text.settings.text_style.options__2.label"
+            },
+            {
+              "value": "uppercase",
+              "label": "t:sections.main-product.blocks.text.settings.text_style.options__3.label"
+            }
+          ],
+          "default": "body",
+          "label": "t:sections.main-product.blocks.text.settings.text_style.label"
+        }
+      ]
+    },
+    {
+      "type": "shop_pay",
+      "name": "Shop pay",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Label",
+          "default": "<p>4 interest-free instalments or from $14.89/mo with</p>"
         }
       ]
     }

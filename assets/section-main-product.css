@@ -381,6 +381,29 @@ a.product__text {
   display: none;
 }
 
+.custom_rating {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.shop_pay {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0;
+}
+
+.shop_pay p {
+  margin: 0;
+}
+
+.pdp-price {
+  margin-bottom: 0;
+}
+
 @media screen and (min-width: 750px) {
   .product__info-container {
     max-width: 48rem;
