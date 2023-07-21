@@ -378,6 +378,12 @@
 }
 ul.banner__list {
   padding: 0;
+  text-align: left;
+  justify-content: center;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+
 }
 .banner__box > * + .banner__text {
   margin-top: 1.5rem;
