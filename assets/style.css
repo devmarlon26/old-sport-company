@@ -2101,9 +2101,9 @@ img.img-fluid {
     display: inline-flex;
     flex-wrap: nowrap !important;
   }
-  .div-block-area .banner__buttons .button--primary {
+  /* .div-block-area .banner__buttons .button--primary {
     min-width: 150px;
-  }
+  } */
   .button--primary {
     font-size: 18px;
   }
