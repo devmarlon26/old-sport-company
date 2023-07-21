@@ -12,7 +12,7 @@
 }
 
 ul.banner__list {
-  list-style-type: none;
+  list-style-type: none !important;
 }
 
 .product__media-wrapper {
