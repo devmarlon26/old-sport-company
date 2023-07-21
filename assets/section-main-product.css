@@ -19,7 +19,11 @@ legend.form__label.layout {
   z-index: 111;
   background-color: #fff;
 }
-
+.size-popup-close {
+  display: flex;
+  justify-content: flex-end;
+  margin: 8px;
+}
 .size_guide {
   color: #0258E8;
   text-align: right;
