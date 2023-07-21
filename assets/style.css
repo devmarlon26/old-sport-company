@@ -883,21 +883,22 @@ img.img-fluid {
 .collections-templates .pagination__item-arrow.active {opacity: 1;}
 .main-product-wrapper .product__text {
   color: #203D5F;
-  font-family: Museo Sans;
+  font-family: "Museo Sans";
   font-size: 14px;
+  font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 21px;
 }
 .main-product-wrapper .product__title {
   margin-bottom: 30px;
-  margin-top: 30px;
+  margin-top: 32px;
 }
 .main-product-wrapper .product__title h1 {
   color: #203D5F;
   font-family: "quiche-sans",sans-serif;
   font-size: 70px;
   font-weight: 300;
-  line-height: normal;
+  line-height: 70px;
   text-transform: capitalize;
 }
 .main-product-wrapper .pdp-price .price-item.price-item--regular,
@@ -932,7 +933,7 @@ img.img-fluid {
   font-family: Museo Sans;
   font-size: 16px;
   font-weight: 400;
-  line-height: normal;
+  line-height: 24px;
   text-transform: capitalize;
 }
 .main-product-wrapper .product-variant-picker-section .form__label {
