@@ -2179,7 +2179,7 @@ img.img-fluid {
 }
 @media screen and (max-width: 320px) {
   .banner-slider-block .slider__pagination {
-    bottom: 60%;
+    bottom: 67%;
   }
   .slider__controls .swiper-slider-arrow {
     top: 17%!important;
