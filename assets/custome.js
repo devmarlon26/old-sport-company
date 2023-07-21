@@ -134,6 +134,8 @@ $( document ).ready(function() {
   $('.size-popup-close').click(function() {
     $('.section-size').hide();
   });
+  
+  $('.product__accordion .accordion:nth-child(1)').attr('open', 'open');
 });
 
 swiper_7 = new Swiper(".cart-drawer_collection", {
