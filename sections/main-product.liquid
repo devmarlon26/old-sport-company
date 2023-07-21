@@ -183,7 +183,7 @@
                   {{ product.description }}
                 </div>
               {%- endif -%}
-              <ul class="usp_parent" style="list-style-type: circle">
+              <ul class="banner__list" style="list-style-type: circle">
                 {% for metafield in product.metafields.custom %}
                   {% assign list = "product_list_" | append: forloop.index %}
                   {% assign custom_field = product.metafields.custom[list] %}
