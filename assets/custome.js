@@ -128,6 +128,11 @@ $( document ).ready(function() {
     var var_data_id = $(this).attr('data-id');
     $('.pdp-varian-form input').val(var_data_id);
   });
+  $('#size_guide').click(function() {
+    $('.section-size').show();
+  });
+  
+  
 });
 
 swiper_7 = new Swiper(".cart-drawer_collection", {
