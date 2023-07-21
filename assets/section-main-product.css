@@ -1453,7 +1453,15 @@ a.product__text {
   flex-direction: row;
   width: 30%;
 }
-
+span.h4.inline-richtext {
+  color: #203D5F;
+font-family: Museo Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+  text-align:left;
+}
 .icon-with-text--vertical .icon-with-text__item {
   margin-bottom: var(--icon-size);
 }
