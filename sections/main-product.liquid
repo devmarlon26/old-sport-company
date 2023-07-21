@@ -630,7 +630,7 @@
     <div class="size__container">
       {% if product.metafields.custom.size_guide %}
         <div class="size-guide">
-          {{ product.metafields.custom.size_guide | escape }}
+          <img src="{{ product.metafields.custom.size_guide | escape }}" alt="Size Guide">
         </div>
       {% endif %}
       {% comment %} <img src="{{ }}"> {% endcomment %}
