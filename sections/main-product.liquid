@@ -628,13 +628,11 @@
       </svg>
     </div>
     <div class="size__container">
-      {% for metafield in product.metafields %}
-        {% if metafield.namespace == 'custom' and metafield.key == 'size_guide' %}
-          <div class="size-guide">
-            {{ metafield.value | escape }}
-          </div>
-        {% endif %}
-      {% endfor %}
+      {% if product.metafields.custom.size_guide %}
+        <div class="size-guide">
+          {{ product.metafields.custom.size_guide | escape }}
+        </div>
+      {% endif %}
       {% comment %} <img src="{{ }}"> {% endcomment %}
     </div>
 </div>
