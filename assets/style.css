@@ -2181,6 +2181,10 @@ img.img-fluid {
   .banner-slider-block .slider__pagination {
     bottom: 67%;
   }
+  li.banner__list-item {
+    width: 320px;
+    margin: auto;
+}
   .slider__controls .swiper-slider-arrow {
     top: 17%!important;
   }
