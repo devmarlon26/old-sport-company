@@ -3,8 +3,8 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
+        "6eb544fc-f0b0-453c-ae19-327ad2390ef1": {
+          "type": "custom_rating",
           "settings": {
             "text": "{{ product.metafields.custom.product_review_label.value }}",
             "text_style": "body"
@@ -18,6 +18,12 @@
         "price": {
           "type": "price",
           "settings": {
+          }
+        },
+        "ff3ffb0c-89e2-460a-ab5e-7349aa4f9bb3": {
+          "type": "shop_pay",
+          "settings": {
+            "text": "<p>4 interest-free instalments or from $14.89\/mo with<\/p>"
           }
         },
         "description": {
@@ -68,9 +74,10 @@
         }
       },
       "block_order": [
-        "vendor",
+        "6eb544fc-f0b0-453c-ae19-327ad2390ef1",
         "title",
         "price",
+        "ff3ffb0c-89e2-460a-ab5e-7349aa4f9bb3",
         "description",
         "variant_picker",
         "buy_buttons",
@@ -333,7 +340,6 @@
         "description_style": "body",
         "collection": "accessories",
         "products_to_show": 25,
-        "columns_desktop": 3,
         "full_width": false,
         "show_view_all": false,
         "view_all_style": "solid",
@@ -343,9 +349,7 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "show_shop_btn": true,
         "padding_top": 100,
         "padding_bottom": 100
       }
