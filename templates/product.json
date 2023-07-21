@@ -60,7 +60,7 @@
         "bf7cbfc5-7670-42ff-9617-d3084fbc2f4f": {
           "type": "complementary",
           "settings": {
-            "block_heading": "Pairs well with",
+            "block_heading": "Add any of these to your order to complete the look:",
             "make_collapsible_row": false,
             "icon": "price_tag",
             "product_list_limit": 3,
