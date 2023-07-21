@@ -14,6 +14,7 @@ legend.form__label.layout {
   position: fixed;
   left: 50%;
   top: 50%;
+  width: 50%;
   transform: translate(-50%, -50%);
   display: none;
   z-index: 111;
