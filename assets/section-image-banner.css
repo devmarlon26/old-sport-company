@@ -427,6 +427,9 @@ ul.banner__list {
   align-items: center;
   gap: 8px;
 }
+.banner__list-item p {
+  margin: 0;
+}
 .banner__box .banner__heading + * {
   margin-top: 1rem;
 }
