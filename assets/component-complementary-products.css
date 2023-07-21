@@ -30,7 +30,7 @@ product-recommendations:not(.is-accordion) .complementary-products__container {
   justify-content: space-between;
   gap: var(--grid-mobile-vertical-spacing);
 }
-ul.list-unstyled > li {
+.complementary-slide ul.list-unstyled > li {
   border-radius: 10px;
   border: 1px solid #D4D4D4;
   background: #FFF;
