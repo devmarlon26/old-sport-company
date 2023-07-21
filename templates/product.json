@@ -45,6 +45,18 @@
             "payment-icon": "shopify:\/\/shop_images\/Payment_3e8ed11b-96f6-4e20-9a80-96962fac2ab1.png"
           }
         },
+        "df218452-a9f0-426e-8946-e9d6839f3926": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "heart",
+            "heading_1": "Heading",
+            "icon_2": "return",
+            "heading_2": "Heading",
+            "icon_3": "truck",
+            "heading_3": "Heading"
+          }
+        },
         "43fbe521-ae68-46ec-b6e4-24cce7966a4a": {
           "type": "collapsible_tab",
           "settings": {
@@ -81,6 +93,7 @@
         "description",
         "variant_picker",
         "buy_buttons",
+        "df218452-a9f0-426e-8946-e9d6839f3926",
         "43fbe521-ae68-46ec-b6e4-24cce7966a4a",
         "5573cab7-3fcb-4a68-9e01-50e66974509a",
         "932b4a03-f9cb-42a3-839c-b14a80ba4cd8"
