@@ -131,8 +131,9 @@ $( document ).ready(function() {
   $('#size_guide').click(function() {
     $('.section-size').show();
   });
-  
-  
+  $('.size-popup-close').click(function() {
+    $('.section-size').hide();
+  });
 });
 
 swiper_7 = new Swiper(".cart-drawer_collection", {
