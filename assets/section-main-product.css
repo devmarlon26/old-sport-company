@@ -15,7 +15,19 @@ ul.banner__list {
   list-style-type: none !important;
   padding: 0 !important;
 }
-
+.banner__list-item {
+  color: #203d5f;
+  font-family: Museo Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
 .product__media-wrapper {
   padding-left: 0;
 }
