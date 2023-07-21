@@ -23,7 +23,7 @@
     >
       {%- for option in product.options_with_values -%}
         <fieldset class="js product-form__input">
-          <legend class="form__label">choose size <span class="size_guide">view sizing guide</span></legend>
+          <legend class="form__label layout">choose size <span class="size_guide">view sizing guide</span></legend>
           {% render 'product-variant-options', product: product, option: option, block: block %}
         </fieldset>
       {%- endfor -%}
