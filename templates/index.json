@@ -44,11 +44,18 @@
             "button_style_secondary_2": false,
             "payment-icon": "shopify:\/\/shop_images\/Payment.png"
           }
+        },
+        "6c77bd6f-318a-439e-88fd-e63416d24684": {
+          "type": "List",
+          "settings": {
+            "banner_list": "Hello"
+          }
         }
       },
       "block_order": [
         "2cc301c7-cfec-49cd-92f2-a3fae2cc37e3",
-        "6fdc318c-98ee-4029-afed-7fe4df1e028c"
+        "6fdc318c-98ee-4029-afed-7fe4df1e028c",
+        "6c77bd6f-318a-439e-88fd-e63416d24684"
       ],
       "settings": {
         "image_overlay_opacity": 40,
