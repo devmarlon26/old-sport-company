@@ -84,17 +84,17 @@
             "page": ""
           }
         },
-        "04a5b93d-078a-40e4-a51c-2a508e36225f": {
+        "bf7cbfc5-7670-42ff-9617-d3084fbc2f4f": {
           "type": "complementary",
           "settings": {
             "block_heading": "Pairs well with",
             "make_collapsible_row": false,
-            "icon": "bottle",
+            "icon": "price_tag",
             "product_list_limit": 10,
             "products_per_page": 3,
-            "pagination_style": "numbers",
+            "pagination_style": "counter",
             "image_ratio": "square",
-            "enable_quick_add": true
+            "enable_quick_add": false
           }
         }
       },
@@ -110,7 +110,7 @@
         "43fbe521-ae68-46ec-b6e4-24cce7966a4a",
         "5573cab7-3fcb-4a68-9e01-50e66974509a",
         "932b4a03-f9cb-42a3-839c-b14a80ba4cd8",
-        "04a5b93d-078a-40e4-a51c-2a508e36225f"
+        "bf7cbfc5-7670-42ff-9617-d3084fbc2f4f"
       ],
       "settings": {
         "enable_sticky_info": true,
